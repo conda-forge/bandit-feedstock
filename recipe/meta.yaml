@@ -10,7 +10,7 @@ source:
   sha256: 9413facfe9de1e1bd291d525c784e1beb1a55c9916b51dae12979af63a69ba4c
 
 build:
-  number: 0
+  number: 1
   entry_points: 
     - bandit=bandit.cli.main:main
     - bandit-config-generator=bandit.cli.config_generator:main
@@ -25,9 +25,13 @@ requirements:
     - python
     - setuptools
   run:
+    - GitPython >=1.0.1
     - pbr >=2.0.0
     - python
+    - PyYAML >=3.12
     - setuptools
+    - six >=1.10.0
+    - stevedore>=1.20.0
 
 test:
   imports:
