@@ -1,5 +1,5 @@
 {% set name = "bandit" %}
-{% set version = "1.5.1" %}
+{% set version = "1.6.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9413facfe9de1e1bd291d525c784e1beb1a55c9916b51dae12979af63a69ba4c
+  sha256: e50fb4ed4ee8a98b8329385e48e606fded0999a2cb3e2acb6e7213c962ff0de1
 
 build:
   number: 1
@@ -25,10 +25,11 @@ requirements:
     - python
     - setuptools
   run:
+    - colorama >=0.3.9 # [win]
     - GitPython >=1.0.1
     - pbr >=2.0.0
     - python
-    - PyYAML >=3.12
+    - PyYAML >=3.13
     - setuptools
     - six >=1.10.0
     - stevedore >=1.20.0
