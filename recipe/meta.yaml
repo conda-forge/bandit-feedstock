@@ -16,7 +16,6 @@ build:
     - bandit-config-generator=bandit.cli.config_generator:main
     - bandit-baseline=bandit.cli.baseline:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
-  noarch: python
 
 requirements:
   host:
@@ -25,7 +24,7 @@ requirements:
     - python
     - setuptools
   run:
-    - colorama >=0.3.9 # [win]
+    - colorama >=0.3.9  # [win]
     - GitPython >=1.0.1
     - pbr >=2.0.0
     - python
