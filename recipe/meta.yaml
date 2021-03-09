@@ -1,21 +1,21 @@
 {% set name = "bandit" %}
-{% set version = "1.6.2" %}
+{% set version = "1.6.3" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41e75315853507aa145d62a78a2a6c5e3240fe14ee7c601459d0df9418196065
+  sha256: d02dfe250f4aa2d166c127ad81d192579e2bfcdb8501717c0e2005e35a6bcf60
 
 build:
-  number: 2
-  entry_points: 
+  number: 0
+  entry_points:
     - bandit=bandit.cli.main:main
     - bandit-config-generator=bandit.cli.config_generator:main
     - bandit-baseline=bandit.cli.baseline:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -41,7 +41,7 @@ test:
 
 about:
   home: https://bandit.readthedocs.io/en/latest/
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: |
@@ -55,3 +55,4 @@ about:
 extra:
   recipe-maintainers:
     - jkornblum
+    - dbast
