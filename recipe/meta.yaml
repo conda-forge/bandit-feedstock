@@ -15,7 +15,7 @@ build:
     - bandit=bandit.cli.main:main
     - bandit-config-generator=bandit.cli.config_generator:main
     - bandit-baseline=bandit.cli.baseline:main
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
