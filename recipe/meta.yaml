@@ -37,7 +37,10 @@ test:
   imports:
     - bandit
   commands:
+    - pip check
     - bandit --help
+  requires:
+    - pip
 
 about:
   home: https://bandit.readthedocs.io/en/latest/
