@@ -28,9 +28,8 @@ requirements:
     - GitPython >=1.0.1
     - pbr >=2.0.0
     - python
-    - PyYAML >=3.13
+    - PyYAML >=5.3.1
     - setuptools
-    - six >=1.10.0
     - stevedore >=1.20.0
 
 test:
