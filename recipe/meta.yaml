@@ -21,13 +21,13 @@ requirements:
   host:
     - pbr >=2.0.0
     - pip
-    - python >=3.7
+    - python
     - setuptools
   run:
     - colorama >=0.3.9  # [win]
     - GitPython >=1.0.1
     - pbr >=2.0.0
-    - python >=3.7
+    - python
     - PyYAML >=5.3.1
     - setuptools
     - stevedore >=1.20.0
