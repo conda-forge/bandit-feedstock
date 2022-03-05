@@ -1,5 +1,5 @@
 {% set name = "bandit" %}
-{% set version = "1.7.3" %}
+{% set version = "1.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 58772ca951bf1129dda8a280d351547de832720bf7b5c29fac3103927980b8a6
+  sha256: 2d63a8c573417bae338962d4b9b06fbc6080f74ecd955a092849e1e65c717bd2
 
 build:
   number: 0
