@@ -1,5 +1,5 @@
 {% set name = "bandit" %}
-{% set version = "1.7.4" %}
+{% set version = "1.7.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2d63a8c573417bae338962d4b9b06fbc6080f74ecd955a092849e1e65c717bd2
+  sha256: bdfc739baa03b880c2d15d0431b31c658ffc348e907fe197e54e0389dd59e11e
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - bandit=bandit.cli.main:main
     - bandit-config-generator=bandit.cli.config_generator:main
