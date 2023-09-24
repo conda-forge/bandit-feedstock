@@ -10,7 +10,7 @@ source:
   sha256: bdfc739baa03b880c2d15d0431b31c658ffc348e907fe197e54e0389dd59e11e
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - bandit=bandit.cli.main:main
     - bandit-config-generator=bandit.cli.config_generator:main
