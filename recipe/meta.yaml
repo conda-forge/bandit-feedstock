@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   entry_points:
     - bandit=bandit.cli.main:main
     - bandit-config-generator=bandit.cli.config_generator:main
@@ -20,13 +20,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pbr >=2.0.0
     - pip
     - setuptools
   run:
     - pyyaml >=5.3.1
-    - python >=3.8
+    - python >={{ python_min }}
     - colorama >=0.3.9
     - GitPython >=3.1.30
     - PyYAML >=5.3.1
@@ -41,6 +41,7 @@ test:
     - bandit --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://bandit.readthedocs.io/en/latest/
